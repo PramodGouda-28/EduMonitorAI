@@ -28,11 +28,6 @@ EduMonitor AI is a mini-project developed using Python Flask and SQLite.
 
 To develop a system that allows students to study PDF materials while enabling parents to monitor learning progress, application usage, quiz performance, and study reports.
 
-### Team Members
-
-* Your Name
-* Teammate 1
-* Teammate 2
 
 ### Status
 
