@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<main class="app-shell">
+    <aside class="sidebar">
+        <h2>LearnTrack</h2>
+        <nav>
+            <a class="active" href="/student">Dashboard</a>
+            <a href="#">PDF Reader</a>
+            <a href="#">AI Quiz</a>
+            <a href="#">Reports</a>
+        </nav>
+        <div class="profile">
+            <strong>{{ student_name }}</strong>
+            <span>Student</span>
+        </div>
+    </aside>
+
+    <section class="content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Student Dashboard</p>
+                <h1>Welcome, {{ student_name }}</h1>
+            </div>
+            <a class="logout" href="/logout">Logout</a>
+        </header>
+
+        <div class="grid two">
+            <article class="card">
+                <h3>Parent Access Code</h3>
+                <p class="muted">Share this code with your parent to link their account.</p>
+                <h2>{{ access_code }}</h2>
+            </article>
+
+            <article class="card">
+                <h3>PDF Learning</h3>
+                <p class="muted">Uploaded PDF: Python Basics.pdf</p>
+                <div class="progress-line">
+                    <span style="width: 70%"></span>
+                </div>
+                <strong class="percent">70%</strong>
+                <div class="stats">
+                    <div><span>Pages Read</span><strong>14 / 20</strong></div>
+                    <div><span>Reading Time</span><strong>45 min</strong></div>
+                </div>
+                <div class="actions">
+                    <button>Open PDF</button>
+                    <button class="secondary">Generate Quiz</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Current Study Status</h3>
+                <p class="muted">Last opened application</p>
+                <h2>YouTube Python Tutorial</h2>
+                <span class="badge good">Educational</span>
+                <div class="quiz-score">
+                    <span>Latest Quiz</span>
+                    <strong>8 / 10</strong>
+                </div>
+            </article>
+        </div>
+
+        <article class="card reader-card">
+            <h3>PDF Reader Preview</h3>
+            <div class="pdf-preview">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="muted center">Page 14 of 20</p>
+        </article>
+    </section>
+</main>
+</body>
+</html>

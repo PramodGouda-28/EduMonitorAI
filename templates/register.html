@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<main class="auth-page">
+    <section class="auth-card wide">
+        <p class="eyebrow">Create Account</p>
+        <h1>Register</h1>
+        <p class="muted">Create a student or parent account.</p>
+        <p class="alert">{{ message }}</p>
+
+        <form method="post" class="form">
+            <label>Role</label>
+            <select name="role">
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+            </select>
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create password" required>
+
+            <label>Student Access Code for Parent Account</label>
+            <input type="text" name="access_code" placeholder="Example: EDU12345">
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p class="auth-link">Already registered? <a href="/">Choose login page</a></p>
+    </section>
+</main>
+</body>
+</html>

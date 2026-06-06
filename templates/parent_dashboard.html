@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<main class="app-shell">
+    <aside class="sidebar parent">
+        <h2>LearnTrack</h2>
+        <nav>
+            <a class="active" href="/parent">Overview</a>
+            <a href="#">Progress</a>
+            <a href="#">Usage Logs</a>
+            <a href="#">Reports</a>
+        </nav>
+        <div class="profile">
+            <strong>Parent</strong>
+            <span>Parent</span>
+        </div>
+    </aside>
+
+    <section class="content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Parent Dashboard</p>
+                <h1>Monitoring {{ student_name }}</h1>
+            </div>
+            <a class="logout" href="/logout">Logout</a>
+        </header>
+
+        <div class="grid two">
+            <article class="card">
+                <h3>Learning Progress</h3>
+                <p class="muted">PDF: Python Basics.pdf</p>
+                <div class="progress-line">
+                    <span style="width: 70%"></span>
+                </div>
+                <strong class="percent">70%</strong>
+                <div class="stats">
+                    <div><span>Pages</span><strong>14 / 20</strong></div>
+                    <div><span>Reading Time</span><strong>45 min</strong></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Quiz Performance</h3>
+                <p class="muted">Latest AI quiz score</p>
+                <h2 class="big-score">8 / 10</h2>
+            </article>
+        </div>
+
+        <div class="usage-grid">
+            <article class="usage good"><span>Educational Usage</span><strong>35 min</strong></article>
+            <article class="usage bad"><span>Entertainment Usage</span><strong>12 min</strong></article>
+            <article class="usage game"><span>Game Usage</span><strong>20 min</strong></article>
+        </div>
+
+        <article class="card">
+            <h3>Recent Applications</h3>
+            <div class="activity-list">
+                <div class="activity-row">
+                    <div>
+                        <strong>YouTube Python Tutorial</strong>
+                        <span>Duration: 20 min</span>
+                    </div>
+                    <span class="badge good">Educational</span>
+                </div>
+
+                <div class="activity-row">
+                    <div>
+                        <strong>Instagram Reels</strong>
+                        <span>Duration: 12 min</span>
+                    </div>
+                    <span class="badge bad">Entertainment</span>
+                </div>
+
+                <div class="activity-row">
+                    <div>
+                        <strong>Valorant.exe</strong>
+                        <span>Duration: 20 min</span>
+                    </div>
+                    <span class="badge game">Game</span>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+</body>
+</html>
